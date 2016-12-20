@@ -19,6 +19,8 @@ public class ArrayExample {
 		float economyMark = 47.5f;
 		
 		int ages[]  = {age1, age2,age3,40,30,78}; // creation and initialization
+		
+		
 		System.out.println("Printing Ages===="+ ages.length);
 		calcualte(ages);
 //		for(int i =0 ; i < ages.length ; i++) {
