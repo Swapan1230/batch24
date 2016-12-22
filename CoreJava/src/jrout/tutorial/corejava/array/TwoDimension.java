@@ -17,7 +17,7 @@ public class TwoDimension {
 		
 		//System.out.println(agesHeights[1][0] + " Height = "+ agesHeights[1][1]);
 		
-		for(int i = 0 ; i < agesHeights.length; i++) {
+		for(int i = 0 , k =0 ; i < agesHeights.length  ; i++) {
 			for(int j=0 ; j < agesHeights[i].length; j++ ) {
 				System.out.print(agesHeights[i][j] +" ");
 			}
