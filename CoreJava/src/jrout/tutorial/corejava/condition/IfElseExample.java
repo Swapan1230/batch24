@@ -6,6 +6,7 @@ public class IfElseExample {
 		// java IfElseExample JAVA
 		int age1 = 34;
 		int age2 = 34;
+		
 		System.out.println(age1 == age2);
 		
 		boolean isJavaClass = ("JAVA" == "JAVA");
