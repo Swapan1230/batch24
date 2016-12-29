@@ -1,7 +1,7 @@
 package jrout.tutorial.corejava.classes;
 
 public class Person {
-	int age; // Premitive
-	String name;
-	String occupation;
+	public int age; // Premitive
+	public String name;
+	public String occupation;
 }	

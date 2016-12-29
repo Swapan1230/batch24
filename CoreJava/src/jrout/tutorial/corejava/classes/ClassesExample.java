@@ -6,8 +6,6 @@ public class ClassesExample {
 		
 		int age = 12;
 		
-		
-		
 		Person person1 = new Person();
 		person1.age = 18;
 		person1.name = "Swetha";
