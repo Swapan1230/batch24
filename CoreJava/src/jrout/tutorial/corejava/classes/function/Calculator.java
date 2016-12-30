@@ -9,20 +9,19 @@ public class Calculator {
 		int d = 3;
 		
 		Calculator calc = new Calculator();
-		int add = calc.add(a, b);
+//		int add = calc.add(a, b);
+		int add = calc.add(a, b, c);
 		
 		int sub = calc.sub(c, d);
+		calc.printFinalResult(add, sub);
 		
 		
-//		System.out.println(calc.name); // State
-		
-//		int div = calc.add(a, b)/calc.sub(c, d);
-		int div = add/sub;
-		
-		System.out.println("Division of the previous calcuation is "+ div);
-
 	}
 	
+	public void printFinalResult(int val1 , int val2){
+		int div = val1/val2;
+		System.out.println("Division of the previous calcuation is "+ div);
+	}
 	/**
 	 * behaviours
 	 * @param a
@@ -37,5 +36,11 @@ public class Calculator {
 		System.out.println(a-b);
 		return a-b;
 	}
+	
+	public int add(int a , int b, int c) {
+//		return a+b+c;
+		return this.add(a,b)+c;
+	}
+	
 	
 }
