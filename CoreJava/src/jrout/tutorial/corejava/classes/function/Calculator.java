@@ -12,8 +12,9 @@ public class Calculator {
 //		int add = calc.add(a, b);
 		int add = calc.add(a, b, c);
 		
-		int sub = calc.sub(c, d);
-		calc.printFinalResult(add, sub);
+//		int sub = calc.sub(c, d);
+//		calc.printFinalResult(add, sub);
+		System.out.println(add);
 		
 		
 	}
@@ -28,7 +29,7 @@ public class Calculator {
 	 * @param b
 	 */
 	public int add(int a , int b) {
-		System.out.println(a+b);
+		//System.out.println(a+b);
 		return a+b;
 	}
 	
