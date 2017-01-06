@@ -5,8 +5,16 @@ public class Person {
 	public String name;
 	public String occupation;
 	
+	public Dog dog; // HAS-A Relationship
+	public Address address;
+	
 	@Override
 	public String toString() {
 		return name;
 	}
 }	
+
+class Address{
+	String add1;
+	String add2;
+}
