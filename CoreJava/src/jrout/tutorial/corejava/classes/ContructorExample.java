@@ -1,9 +1,10 @@
 package jrout.tutorial.corejava.classes;
 
+import java.util.Scanner;
+
 public class ContructorExample {
 
 	public static void main(String[] args) {
-		
 		Employee radhika = new Employee("Radhika");
 		radhika.setAge(-1);
 		
