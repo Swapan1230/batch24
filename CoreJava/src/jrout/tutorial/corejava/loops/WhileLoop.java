@@ -1,5 +1,7 @@
 package jrout.tutorial.corejava.loops;
 
+import jrout.tutorial.corejava.classes.Employee;
+
 public class WhileLoop {
 
 	public static void main(String[] args) {
@@ -35,7 +37,9 @@ public class WhileLoop {
 			i++;
 		} while (i < ages.length);
 		
-		
+		for(int j = 0 ; j <5 ; j++) {
+			new Employee("");
+		}
 
 	}
 
