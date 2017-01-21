@@ -9,6 +9,8 @@ import java.sql.Statement;
 public class JDBCProgram {
 	
 	public static void main(String[] args) {
+		args[0] = "10001";
+		int empId = Integer.parseInt(args[0]);
 		String oracleDriver = "oracle.jdbc.driver.OracleDriver";
 	    String oracleConnectionURL = "jdbc:oracle:thin:@localhost:1521/XE";
 		
@@ -16,7 +18,7 @@ public class JDBCProgram {
 	String connectionURL = "jdbc:mysql://localhost:3306/employees";
 	String connectionUserName = "root";
 	String connectionPassword = "root";
-	String selectQuery = "SELECT * FROM employees";
+	String selectQuery = "SELECT * FROM employees where emp_no = 10001";
 	
 	Connection con = null;
 	Statement stmt = null;
@@ -33,7 +35,7 @@ public class JDBCProgram {
 		con = DriverManager.getConnection(connectionURL,connectionUserName,connectionPassword);
 		System.out.println("Connection is established...");
 		stmt = con.createStatement();
-		rs = stmt.executeQuery(selectQuery);
+		rs = stmt.executeQuery("SELECT * FROM employees where emp_no = "+ empId);
 		while(rs.next()) {
 			System.out.println(rs.getString("first_name") +" \t" + rs.getString("last_name"));;
 		}
