@@ -30,12 +30,14 @@ public class HelloWorld extends HttpServlet {
 		System.out.println("This is my HelloWorld Program...");
 		response.setContentType("text/html");
         PrintWriter out = response.getWriter();
+        
+        String name = request.getParameter("myname");
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Hello World!</title>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<h1>Hello World!</h1>");
+        out.println("<h1>Hello World!"+name+"</h1>");
         out.println("</body>");
         out.println("</html>");
 
