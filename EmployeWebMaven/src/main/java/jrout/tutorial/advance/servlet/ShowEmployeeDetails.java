@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.log4j.Logger;
+
 import jrout.tutorial.advance.domain.Employee;
 
 /**
@@ -19,19 +21,19 @@ import jrout.tutorial.advance.domain.Employee;
 @WebServlet("/ShowEmployeeDetails")
 public class ShowEmployeeDetails extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	private static Logger logger = Logger.getLogger(ShowEmployeeDetails.class);
     /**
      * Default constructor. 
      */
     public ShowEmployeeDetails() {
-        System.out.println("Constructor....");;
+        logger.info("Constructor....");;
     }
 
 	/**
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("Initilizing the Servlet...");
+		logger.info("Initilizing the Servlet...");
 		
 	}
 
@@ -39,7 +41,7 @@ public class ShowEmployeeDetails extends HttpServlet {
 	 * @see Servlet#destroy()
 	 */
 	public void destroy() {
-		System.out.println("Destroying the Servlet...");
+		logger.info("Destroying the Servlet...");
 	}
 
 	
@@ -47,7 +49,7 @@ public class ShowEmployeeDetails extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Employee emp = (Employee) request.getAttribute("employee");
-		System.out.println("This is my HelloWorld Program...");
+		logger.debug("This is my HelloWorld Program...");
 		response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         

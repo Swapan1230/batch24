@@ -45,7 +45,7 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
 			while (rs.next()) {
 				emp = new Employee();
 				emp.setEmployeeNo(empId);
-				emp.setFirstName(rs.getString("first_name"));
+				emp.setFirstName(rs.getString("first_name"));// Jayram
 				emp.setLastName(rs.getString("last_name"));
 			}
 			
@@ -110,4 +110,10 @@ public class EmployeeDAOImpl implements IEmployeeDAO {
 			}
 		}
 	}
+	
+	/*public static void main(String arg[]) {
+		EmployeeDAOImpl impl = new EmployeeDAOImpl();
+		Employee emp = impl.fetchEmployee(10001);
+		System.out.println(emp.getFirstName());
+	}*/
 }

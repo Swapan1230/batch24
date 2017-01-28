@@ -1,6 +1,7 @@
 package jrout.tutorial.advance.servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -19,15 +20,15 @@ import org.apache.log4j.Logger;
 /**
  * Servlet implementation class GetEmployeeDetails
  */
-@WebServlet("/EmployeeController")
-public class EmployeeController extends HttpServlet {
+@WebServlet("/WrongAccess")
+public class WrongAccess extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static Logger logger = Logger.getLogger(EmployeeController.class);
 	
     /**
      * Default constructor. 
      */
-    public EmployeeController() {
+    public WrongAccess() {
         System.out.println("Constructor....");;
     }
 
@@ -51,34 +52,11 @@ public class EmployeeController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //		System.out.println("Entering the service method...");
-		logger.info("Entering the service method...");
-		String type = request.getParameter("type");
-		
-		IEmployeeDAO dao = new EmployeeDAOImpl();
-		logger.debug("DAO has been initialized...");
-//		logger.error(message);
-//		System.out.println("DAO has been initialized...");
-		
-		if("allemployee".equals(type)) {
-			String gender = request.getParameter("gender");	
-			List<Employee> employees = dao.fetchEmployees(gender);
-			for(Employee emp : employees) {
-				System.out.println(emp.getEmployeeNo() + " " + emp.getFirstName());
-			}
-			
-			request.setAttribute("employees", employees);
-			RequestDispatcher rd =  request.getRequestDispatcher("ShowAllEmployeeDetails");
-			rd.forward(request, response);
-			
-		}else {
-			int empId = Integer.parseInt(request.getParameter("empId"));
-			Employee emp = dao.fetchEmployee(empId);
-			System.out.println(emp.getEmployeeNo() + " " + emp.getFirstName());
-			request.setAttribute("employee", emp);
-//			RequestDispatcher rd =  request.getRequestDispatcher("ShowEmployeeDetails");
-			RequestDispatcher rd =  request.getRequestDispatcher("showemployee.jsp");
-			rd.forward(request, response);
-		}
+		logger.info("Entering the service method... WrongAccess");
+		response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("Sorry Wrong access");
+ 		
 	}
 	
 	@Override

@@ -9,7 +9,7 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <servlet>
+  <!--servlet>
     <description></description>
     <display-name>ShowEmployeesDetail</display-name>
     <servlet-name>ShowEmployeesDetail</servlet-name>
@@ -19,4 +19,13 @@
     <servlet-name>ShowEmployeesDetail</servlet-name>
     <url-pattern>/ShowEmployeesDetail</url-pattern>
   </servlet-mapping>
+  <filter>
+    <display-name>AuthinticationFilter</display-name>
+    <filter-name>AuthinticationFilter</filter-name>
+    <filter-class>jrout.tutorial.advance.servlet.AuthinticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthinticationFilter</filter-name>
+    <url-pattern>/AuthinticationFilter</url-pattern>
+  </filter-mapping-->
 </web-app>
