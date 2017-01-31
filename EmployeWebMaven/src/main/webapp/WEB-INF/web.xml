@@ -9,23 +9,24 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  <!--servlet>
+  <servlet>
     <description></description>
-    <display-name>ShowEmployeesDetail</display-name>
-    <servlet-name>ShowEmployeesDetail</servlet-name>
-    <servlet-class>jrout.tutorial.advance.servlet.ShowEmployeesDetail</servlet-class>
+    <display-name>ServletSessionUsingCookies</display-name>
+    <servlet-name>ServletSessionUsingCookies</servlet-name>
+    <servlet-class>jrout.tutorial.advance.servlet.ServletSessionUsingCookies</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>ShowEmployeesDetail</servlet-name>
-    <url-pattern>/ShowEmployeesDetail</url-pattern>
+    <servlet-name>ServletSessionUsingCookies</servlet-name>
+    <url-pattern>/ServletSessionUsingCookies</url-pattern>
   </servlet-mapping>
-  <filter>
-    <display-name>AuthinticationFilter</display-name>
-    <filter-name>AuthinticationFilter</filter-name>
-    <filter-class>jrout.tutorial.advance.servlet.AuthinticationFilter</filter-class>
-  </filter>
-  <filter-mapping>
-    <filter-name>AuthinticationFilter</filter-name>
-    <url-pattern>/AuthinticationFilter</url-pattern>
-  </filter-mapping-->
+  <servlet>
+    <description></description>
+    <display-name>HiddenForm</display-name>
+    <servlet-name>HiddenForm</servlet-name>
+    <servlet-class>jrout.tutorial.advance.servlet.HiddenForm</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HiddenForm</servlet-name>
+    <url-pattern>/HiddenForm</url-pattern>
+  </servlet-mapping>
 </web-app>
